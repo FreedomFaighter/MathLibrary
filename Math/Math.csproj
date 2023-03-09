@@ -75,11 +75,6 @@
     <Compile Include="LinearAlgebra\Eigen.cs" />
     <Compile Include="LinearAlgebra\Math.cs" />
     <Compile Include="LinearAlgebra\Exceptions.cs" />
-    <Compile Include="LinearAlgebra\T4Template.cs">
-      <DependentUpon>T4Template.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup />
@@ -88,11 +83,5 @@
       <Project>{A098B576-F6D0-4866-84EC-57D94137D7CB}</Project>
       <Name>MathLog</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="LinearAlgebra\T4Template.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>T4Template.cs</LastGenOutput>
-    </None>
   </ItemGroup>
 </Project>
