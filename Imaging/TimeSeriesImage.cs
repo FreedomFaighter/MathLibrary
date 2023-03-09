@@ -6,30 +6,32 @@ namespace Imaging
 {
     public class TimeSeriesImage : IDisposable
     {
-        Bitmap timeSeriesBitmap;
+        Bitmap thisBitmap;
 
-        public Bitmap TimeSeriesBitmap
+        public Bitmap ThisBitmap
         {
-            get { return timeSeriesBitmap; }
+            get { return this.thisBitmap; }
         }
 
-        public TimeSeriesImage(double[] timeSeries, int widthSeperatingImage, int heightOfImage)
+        public TimeSeriesImage(double[] timeSeries)
         {
             double max = timeSeries.Max();
             double min = timeSeries.Min();
+            int ticksUpward = (int)(max / 10) + 1;
+            int ticksDownward = (int)(min / 10) + 1;
 
-            int width = timeSeries.Length * widthSeperatingImage;
+            int width = timeSeries.Length * 15;
             int height;
             if (min > 0)
-                height = (int)(max * heightOfImage);
+                height = (int)(max * 15);
             else if (max < 0)
-                height = (int)(min * -heightOfImage);
+                height = (int)(min * -15);
             else
             {
-                height = (int)((max - min) * heightOfImage);
+                height = (int)((max - min) * 15);
             }
-            timeSeriesBitmap = new Bitmap(width, height);
-            using (Graphics g = Graphics.FromImage(timeSeriesBitmap))
+            this.thisBitmap = new Bitmap(width, height);
+            using (Graphics g = Graphics.FromImage(this.thisBitmap))
             {
                 Pen black = new Pen(Color.Black);
                 Pen green = new Pen(Color.Green);
@@ -50,19 +52,17 @@ namespace Imaging
             }
         }
 
-        public void SaveToFile(string fileName, ImageFormat imageFormat)
+        public void SaveToFile(string fileName)
         {
-            using(System.IO.FileStream fs = new System.IO.FileStream(fileName, System.IO.FileMode.Append))
-            {
-                timeSeriesBitmap.Save(fs, imageFormat);
-            }
+            this.thisBitmap.Save(fileName, ImageFormat.Png);
         }
 
         #region IDisposable implementation
 
         public void Dispose()
         {
-            timeSeriesBitmap.Dispose();
+            this.thisBitmap.Dispose();
+            this.thisBitmap = null;
         }
 
         #endregion
