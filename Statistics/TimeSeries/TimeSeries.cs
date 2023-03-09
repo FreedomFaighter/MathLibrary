@@ -15,7 +15,7 @@ namespace Statistics.TimeSeries
 		private Matrix covarianceMatrix;
 		private Matrix autocorrelationMatrix;
 		private Matrix partialAutocorrelationMatrix;
-		private double Qportmanteautest;
+		//private double Qportmanteautest;
 
 		public double[] SampleAutocorrelationFunction{
 			get{ return this.sampleAutocorrelationFunction;}
@@ -108,7 +108,7 @@ namespace Statistics.TimeSeries
 
 		private void ComputeQportmanteau()
 		{
-
+			throw new NotImplementedException();
 		}
 	}
 }
