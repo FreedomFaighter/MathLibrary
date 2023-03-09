@@ -16,10 +16,6 @@ namespace Statistics.TimeSeries
 		private Matrix autocorrelationMatrix;
 		private Matrix partialAutocorrelationMatrix;
 		private double Qportmanteautest;
-		private TimeSeries ()
-		{
-
-		}
 
 		public double[] SampleAutocorrelationFunction{
 			get{ return this.sampleAutocorrelationFunction;}
