@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB98B124-583B-49A0-9399-F194EB9E4B01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Math</RootNamespace>
+    <AssemblyName>Math</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Core" />
+    <Reference Include="Parallel">
+      <HintPath>..\..\Parallel\Parallel\bin\Release\Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="MonoDevelop.TextTemplating, Version=2.6.0.0, Culture=neutral">
+      <Private>False</Private>
+      <Package>/usr/lib/monodevelop/AddIns/MonoDevelop.TextTemplating/MonoDevelop.TextTemplating.dll</Package>
+    </Reference>
+    <Reference Include="PackageManagement">
+      <HintPath>..\..\..\..\media\psf\Home\Downloads\SharpDevelop_5.1.0.4936_Beta_Source\AddIns\Misc\PackageManagement\PackageManagement.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DecimalMath.cs" />
+    <Compile Include="NumericalMethods\INumericalMethod.cs" />
+    <Compile Include="NumericalMethods\OridinaryDifferentialEquations\AdamsFourthOrderPredictorCorrector.cs" />
+    <Compile Include="NumericalMethods\OridinaryDifferentialEquations\AdamsVariableStepSizePredictorCorrector.cs" />
+    <Compile Include="NumericalMethods\OridinaryDifferentialEquations\Eulers.cs" />
+    <Compile Include="NumericalMethods\OridinaryDifferentialEquations\RungeKuttaFehlberg.cs" />
+    <Compile Include="NumericalMethods\OridinaryDifferentialEquations\RungeKutta.cs" />
+    <Compile Include="NumericalMethods\OridinaryDifferentialEquations\Extrapolation.cs" />
+    <Compile Include="NumericalMethods\OridinaryDifferentialEquations\RungeKuttaMethodForSystemsOfDifferentialEquations.cs" />
+    <Compile Include="NumericalMethods\OridinaryDifferentialEquations\TrapezoialWithNewtonIteration.cs" />
+    <Compile Include="Differentiation\Differentiation.cs" />
+    <Compile Include="LinearAlgebra\Matrix.cs" />
+    <Compile Include="LinearAlgebra\IVector.cs" />
+    <Compile Include="LinearAlgebra\RowVector.cs" />
+    <Compile Include="LinearAlgebra\ColumnVector.cs" />
+    <Compile Include="LinearAlgebra\EigenValueDecomposition.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="NumericalMethods\Polynomials\NewtonsDividedDifference.cs" />
+    <Compile Include="BinomialCoefficient.cs" />
+    <Compile Include="NumericalMethods\Polynomials\HermiteInterpolation.cs" />
+    <Compile Include="LinearAlgebra\QR.cs" />
+    <Compile Include="LinearAlgebra\Cholesky.cs" />
+    <Compile Include="LinearAlgebra\Eigen.cs" />
+    <Compile Include="LinearAlgebra\Math.cs" />
+    <Compile Include="LinearAlgebra\Exceptions.cs" />
+    <Compile Include="LinearAlgebra\T4Template.cs">
+      <DependentUpon>T4Template.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MathLog\MathLog.csproj">
+      <Project>{A098B576-F6D0-4866-84EC-57D94137D7CB}</Project>
+      <Name>MathLog</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LinearAlgebra\T4Template.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>T4Template.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>
