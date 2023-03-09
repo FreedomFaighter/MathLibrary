@@ -26,11 +26,6 @@ namespace Baysian.Classifier
 
         private Dictionary<string, Matrix> inverseSigmas = new Dictionary<string, Matrix>();
 
-        private Classifier()
-        {
-
-        }
-
         public Classifier(Dictionary<string, Matrix> classes)
         {
             this.classes = classes;
