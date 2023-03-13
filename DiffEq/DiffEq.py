@@ -12,8 +12,8 @@ def secondOrderSolutionFrom(a, b, c):
 		return c1*exp(roots[1]*x)+c2*exp(roots[2]*x)
 	elif b!=0:
 		return ((c1+c2)*exp(oo*x),-(c/b)*x)
-	else:
-		return Error("Not a differential equation of first or second order")
+#	else:
+#		return Error("Not a differential equation of first or second order")
 
 def seperableEquations(Fg, Fp):
 	x = Symbol('x')
@@ -21,4 +21,4 @@ def seperableEquations(Fg, Fp):
 	c = Symbol('c')
 	h = integrate(1 / Fp, y)
 	g = integrate(Fg, x)
-	return h - g - c
+#	return h - g - c
