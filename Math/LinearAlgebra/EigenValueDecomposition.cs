@@ -724,21 +724,23 @@ namespace Math.LinearAlgebra
 			}
 		}
 
-		private EigenValueDecomposition()
+		public EigenValueDecomposition()
 		{
-
+			
 		}
-
+		//LOL this was writtin at home by a Non-Rackspace employee
 		public object Clone()
 		{
-			var clone = new EigenValueDecomposition ();
-			clone.d = (double[])d.Clone ();
-			clone.e = (double[])e.Clone ();
-			clone.H = new Matrix (H);
-			clone.n = n;
-			clone.ort = (double[])ort;
-			clone.symmetric = symmetric;
-			clone.V = new Matrix (V);
+			EigenValueDecomposition clone = new EigenValueDecomposition()
+			{
+				d = (double[])d.Clone(),
+				e = (double[])e.Clone(),
+				H = new Matrix(H),
+				n = n,
+				ort = ort,
+				symmetric = symmetric,
+				V = new Matrix(V),
+			};
 			return clone;
 		}
 	}
