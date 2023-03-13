@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace Math
 {
@@ -24,13 +23,13 @@ namespace Math
 
 		public static Tuple<double, double> quadraticRoots(Tuple<double, double, double> coefficients)
 		{
-			double positiveRoots, negativeRoots;
+			double root1, root2;
 			if (coefficients.Item1 != 0)
 			{
-				positiveRoots = (coefficients.Item2 + System.Math.Sqrt(System.Math.Pow(coefficients.Item2, 2) - Convert.ToDouble(4) * coefficients.Item1 * coefficients.Item3)) / (2 * coefficients.Item1);
-				negativeRoots = (coefficients.Item2 + System.Math.Sqrt(System.Math.Pow(coefficients.Item2, 2) - Convert.ToDouble(4) * coefficients.Item1 * coefficients.Item3)) / (2 * coefficients.Item1);
+				root1 = (coefficients.Item2 + System.Math.Sqrt(System.Math.Pow(coefficients.Item2, 2) - Convert.ToDouble(4) * coefficients.Item1 * coefficients.Item3)) / (2 * coefficients.Item1);
+				root2 = (coefficients.Item2 - System.Math.Sqrt(System.Math.Pow(coefficients.Item2, 2) - Convert.ToDouble(4) * coefficients.Item1 * coefficients.Item3)) / (2 * coefficients.Item1);
 
-				return new Tuple<double, double>(positiveRoots, negativeRoots);
+				return new Tuple<double, double>(root1, root2);
 			}
 			else throw new ArgumentOutOfRangeException($"Coefficient of the square in the second degree polynomial is {coefficients.Item1} and must be non-zero, if not zero and exception is thrown.");
 		}
