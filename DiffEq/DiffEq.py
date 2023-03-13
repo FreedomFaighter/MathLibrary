@@ -27,4 +27,3 @@ def linearFirstOrderEquation(Fa1, Fa0, Fb):
 def standardForm(Fp, Fq):
 	Fmu = exp(integrate(Fp, x))
 	integrate(Fmu*Fq+c, x) / Fmu
-
