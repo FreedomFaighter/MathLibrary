@@ -36,17 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Core" />
-    <Reference Include="Parallel">
-      <HintPath>..\..\Parallel\Parallel\bin\Release\Parallel.dll</HintPath>
-    </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="MonoDevelop.TextTemplating, Version=2.6.0.0, Culture=neutral">
-      <Private>False</Private>
-      <Package>/usr/lib/monodevelop/AddIns/MonoDevelop.TextTemplating/MonoDevelop.TextTemplating.dll</Package>
-    </Reference>
-    <Reference Include="PackageManagement">
-      <HintPath>..\..\..\..\media\psf\Home\Downloads\SharpDevelop_5.1.0.4936_Beta_Source\AddIns\Misc\PackageManagement\PackageManagement.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,6 +1,4 @@
 using System;
-using Parallel;
-using MathLog;
 using System.Collections.Generic;
 
 namespace Math.LinearAlgebra
