@@ -1,4 +1,4 @@
-using System;
+using System.Threading.Tasks;
 
 namespace Math.LinearAlgebra
 {
@@ -12,7 +12,7 @@ namespace Math.LinearAlgebra
 		public static Matrix Abs(Matrix matrix)
 		{
 			Matrix result = new Matrix (matrix);
-			Parallel.Parallel.For (0, matrix.Rows, (i) =>
+			Parallel.For (0, matrix.Rows, (i) =>
 			{
 				for(int j = 0; j < matrix.Columns;j++)
 				{
