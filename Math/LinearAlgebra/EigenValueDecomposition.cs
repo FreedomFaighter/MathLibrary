@@ -206,7 +206,7 @@ namespace Math.LinearAlgebra
 						iter++;
 						double g = d [l];
 						double p = (d [l + 1] - g) / (2 * e [l]);
-						double r = Tools.Hypotenuse (p, 1);
+						double r = Tools.Hypotenuse (new Tuple<double, double>(p, 1));
 						if (p < 0) {
 							r = -r;
 						}
@@ -234,7 +234,7 @@ namespace Math.LinearAlgebra
 							s2 = s;
 							g = c * e [i];
 							h = c * p;
-							r = Tools.Hypotenuse (p, e [i]);
+							r = Tools.Hypotenuse (new Tuple<double, double>(p, e [i]));
 							e [i + 1] = h + s * (c * g + s * d [i]);
 
 							for (int k = 0; k < n; k++) {

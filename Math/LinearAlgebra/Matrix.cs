@@ -59,18 +59,9 @@ namespace Math.LinearAlgebra
 
 		}
 
-		public Matrix (int rows, int columns) : this(rows,columns,0)
-		{
-
-		}
-
-		public Matrix (int rows, int columns, double fillValue)
+		public Matrix (int rows, int columns)
 		{
 			this.Values = new double[rows, columns];
-			Parallel.For (0, this.Values.GetLength (0), delegate(int i) {
-				for (int j = 0; j < this.Values.GetLength(1); j++)
-					this.Values [i, j] = fillValue;
-			});
 		}
 
 		public Matrix (double[,] Values)
@@ -92,7 +83,7 @@ namespace Math.LinearAlgebra
 				ml.Write (string.Format ("lhs columns: {0} does not match rhs rows: {1}", lhs.Values.GetLength (1), rhs.Values.GetLength (0)),
 				          System.Reflection.MethodBase.GetCurrentMethod ().Name);
 				ml = null;
-				return new Matrix (0, 0);
+				return new Matrix ();
 			}
 			result = new Matrix (lhs.Values.GetLength (0), rhs.Values.GetLength (1));
 

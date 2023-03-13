@@ -19,11 +19,11 @@ def seperableEquations(Fg, Fp):
 
 def linearFirstOrderEquation(Fa1, Fa0, Fb):
 	if Fa0 is None:
-		integrate(Fb / Fa1) + c
+		return integrate(Fb / Fa1) + c
 	else:
 		if Derivative(Fa1) is Fa0:
-			integrate(Fb, x) / Fa1
+			return integrate(Fb, x) / Fa1
 
 def standardForm(Fp, Fq):
 	Fmu = exp(integrate(Fp, x))
-	integrate(Fmu*Fq+c, x) / Fmu
+	return integrate(Fmu*Fq+c, x) / Fmu

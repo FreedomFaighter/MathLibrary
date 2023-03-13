@@ -1,5 +1,5 @@
 using System;
-using MathLog;
+
 namespace Math.Differentiation
 {
 	static public class Differentiation
