@@ -36,7 +36,10 @@ namespace Math
 
 		public static double Product(this double[] values)
 		{
-			return values.Sum() * values.Length;
+			return values.Aggregate((x1, x2) =>
+			{
+				return x1 * x2;
+			});
 		}
     }	
 }
