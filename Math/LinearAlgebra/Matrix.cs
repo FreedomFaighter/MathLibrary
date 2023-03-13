@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Math.LinearAlgebra
 {
@@ -66,7 +67,7 @@ namespace Math.LinearAlgebra
 		public Matrix (int rows, int columns, double fillValue)
 		{
 			this.Values = new double[rows, columns];
-			Parallel.Parallel.For (0, this.Values.GetLength (0), delegate(int i) {
+			Parallel.For (0, this.Values.GetLength (0), delegate(int i) {
 				for (int j = 0; j < this.Values.GetLength(1); j++)
 					this.Values [i, j] = fillValue;
 			});
@@ -96,7 +97,7 @@ namespace Math.LinearAlgebra
 			result = new Matrix (lhs.Values.GetLength (0), rhs.Values.GetLength (1));
 
 
-			Parallel.Parallel.For (0, lhs.Values.GetLength (0), delegate(int i) {
+			Parallel.For (0, lhs.Values.GetLength (0), delegate(int i) {
 				for (int j = 0; j < result.Values.GetLength(1); j++) {
 					for (int k = 0; k < rhs.Values.GetLength(0); k++)
 						result [i, j] += lhs [i, k] * rhs [k, j];
@@ -120,7 +121,7 @@ namespace Math.LinearAlgebra
 
 			result = new Matrix (lhs.Values.GetLength (0), lhs.Values.GetLength (1));
 
-			Parallel.Parallel.For (0, lhs.Values.GetLength (0), delegate(int i) {
+			Parallel.For (0, lhs.Values.GetLength (0), delegate(int i) {
 				for (int j = 0; j < lhs.Values.GetLength(1); j++) {
 					result [i, j] = lhs [i, j] + rhs [i, j];
 				}
@@ -142,7 +143,7 @@ namespace Math.LinearAlgebra
 
 			result = new Matrix (lhs.Values.GetLength (0), lhs.Values.GetLength (1));
 
-			Parallel.Parallel.For (0, lhs.Values.GetLength (0), delegate(int i) {
+			Parallel.For (0, lhs.Values.GetLength (0), delegate(int i) {
 				for (int j = 0; j < lhs.Values.GetLength(1); j++) {
 					result [i, j] = lhs [i, j] - rhs [i, j];
 				}
@@ -153,7 +154,7 @@ namespace Math.LinearAlgebra
 		public static Matrix Negate (Matrix m)
 		{
 			Matrix result = new Matrix (m);
-			Parallel.Parallel.For (0, m.Values.GetLength (0), delegate(int index) {
+			Parallel.For (0, m.Values.GetLength (0), delegate(int index) {
 				for (int j = 0; j < m.Values.GetLength(1); j++) {
 					result [index, j] *= -1;
 				}
@@ -164,7 +165,7 @@ namespace Math.LinearAlgebra
 		public Matrix Transpose ()
 		{
 			Matrix result = new Matrix (this.Values.GetLength (1), this.Values.GetLength (0));
-			Parallel.Parallel.For (0, this.Values.GetLength (0), delegate(int index) {
+			Parallel.For (0, this.Values.GetLength (0), delegate(int index) {
 				for (int j = 0; j < this.Values.GetLength(1); j++) {
 					result [j, index] = this [index, j];
 				}
@@ -248,7 +249,7 @@ namespace Math.LinearAlgebra
 		public Matrix MultiplyByConstant (double constant)
 		{
 			Matrix result = new Matrix (this);
-			Parallel.Parallel.For (0, this.Values.GetLength (0), delegate(int index) {
+			Parallel.For (0, this.Values.GetLength (0), delegate(int index) {
 				for (int j = 0; j < this.Values.GetLength(1); j++) {
 					result [index, j] *= constant;
 				}
