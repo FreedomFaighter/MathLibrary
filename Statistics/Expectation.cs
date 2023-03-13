@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Math;
 
 namespace Statistics
 {
@@ -20,5 +21,10 @@ namespace Statistics
 			else
 				throw new DivideByZeroException("number of measurements too small (<2)");
 		}
+  
+  static public double StandardDeviation(this double[] values)
+  {
+    return Sqrt(values.Variance());
+  }
 	}
 }
