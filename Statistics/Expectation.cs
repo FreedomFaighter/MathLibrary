@@ -20,5 +20,10 @@ namespace Statistics
 			else
 				throw new DivideByZeroException("number of measurements too small (<2)");
 		}
+  
+  static public double StandardDeviation(this double[] values)
+  {
+    return System.Math.Sqrt(values.Variance());
+  }
 	}
 }
