@@ -1,3 +1,5 @@
+from code import interact
+from numbers import Integral
 from sympy.solvers import solve
 from sympy.abc import x, y, c, Symbol
 from sympy import oo, integrate, exp, Derivative
@@ -27,3 +29,6 @@ def linearFirstOrderEquation(Fa1, Fa0, Fb):
 def standardForm(Fp, Fq):
 	Fmu = exp(integrate(Fp, x))
 	return integrate(Fmu*Fq+c, x) / Fmu
+
+def exactEquations(Fmxy, Fnxy):
+	return integrate(Fmxy,x) - integrate(Fnxy-Derivative(integrate(Fmxy,x),y))
