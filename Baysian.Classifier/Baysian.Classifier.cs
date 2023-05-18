@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Math.LinearAlgebra;
+using MathLibrary.LinearAlgebra;
 
 namespace Baysian.Classifier
 {
