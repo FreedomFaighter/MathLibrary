@@ -60,10 +60,10 @@ namespace Math.LinearAlgebra
 		{
 			RowVector result;
 			if (this.Values.Length != rhs.Values.Length) {
-				MathLog.MathLog ml = new MathLog.MathLog ();
-				ml.Write (string.Format ("lhs: {0} rhs: {1}", this.Values.Length, rhs.Values.Length)
+				//MathLog.MathLog ml = new MathLog.MathLog ();
+				//ml.Write (string.Format ("lhs: {0} rhs: {1}", this.Values.Length, rhs.Values.Length)
 				          , System.Reflection.MethodBase.GetCurrentMethod ().Name);
-				ml = null;
+				//ml = null;
 				return new RowVector ();
 			}
 			result = new RowVector (this.Values);
