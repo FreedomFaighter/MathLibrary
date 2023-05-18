@@ -272,9 +272,9 @@ namespace Math.LinearAlgebra
 			ColumnVector result;
 
 			if (lhs.Values.GetLength (1) != rhs.Values.Length) {
-				MathLog.MathLog ml = new MathLog.MathLog ();
-				ml.Write (string.Format ("{0} != {1}", lhs.Values.GetLength (0), rhs.Values.Length),
-				          System.Reflection.MethodBase.GetCurrentMethod ().Name);
+				//MathLog.MathLog ml = new MathLog.MathLog ();
+				//ml.Write (string.Format ("{0} != {1}", lhs.Values.GetLength (0), rhs.Values.Length),
+				//          System.Reflection.MethodBase.GetCurrentMethod ().Name);
 				return null;
 			}
 			result = new ColumnVector (new double[lhs.Values.GetLength (0)]);
@@ -293,8 +293,8 @@ namespace Math.LinearAlgebra
 		{
 			RowVector result;
 			if (lhs.Values.Length != rhs.Values.GetLength (0)) {
-				MathLog.MathLog ml = new MathLog.MathLog ();
-				ml.Write (string.Format ("{0} != {1}", lhs.Values.Length, rhs.Values.GetLength (0)), 
+				//MathLog.MathLog ml = new MathLog.MathLog ();
+				//ml.Write (string.Format ("{0} != {1}", lhs.Values.Length, rhs.Values.GetLength (0)), 
 				          System.Reflection.MethodBase.GetCurrentMethod ().Name);
 				return null;
 			}
