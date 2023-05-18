@@ -81,7 +81,7 @@ namespace Math.LinearAlgebra
 			if (lhs.Values.GetLength (1) != rhs.Values.GetLength (0)) {
 				//MathLog.MathLog ml = new MathLog.MathLog ();
 				//ml.Write (string.Format ("lhs columns: {0} does not match rhs rows: {1}", lhs.Values.GetLength (1), rhs.Values.GetLength (0)),
-				          System.Reflection.MethodBase.GetCurrentMethod ().Name);
+				//          System.Reflection.MethodBase.GetCurrentMethod ().Name);
 				//ml = null;
 				return new Matrix ();
 			}
@@ -104,8 +104,8 @@ namespace Math.LinearAlgebra
 			if (lhs.Values.GetLength (0) != rhs.Values.GetLength (0) || lhs.Values.GetLength (1) != rhs.Values.GetLength (1)) {
 				//MathLog.MathLog ml = new MathLog.MathLog ();
 				//ml.Write (string.Format ("lhs: {0}x{1} unequal to rhs: {2}x{3}", lhs.Values.GetLength (0), lhs.Values.GetLength (1),
-				                         rhs.Values.GetLength (0), rhs.Values.GetLength (1))
-				          , System.Reflection.MethodBase.GetCurrentMethod ().Name);
+				                         //rhs.Values.GetLength (0), rhs.Values.GetLength (1))
+				          //, System.Reflection.MethodBase.GetCurrentMethod ().Name);
 				//ml = null;
 				return new Matrix (0, 0);
 			}
@@ -126,8 +126,8 @@ namespace Math.LinearAlgebra
 			if (lhs.Values.GetLength (0) != rhs.Values.GetLength (0) || lhs.Values.GetLength (1) != rhs.Values.GetLength (1)) {
 				//MathLog.MathLog ml = new MathLog.MathLog ();
 				//ml.Write (string.Format ("lhs: {0}x{1} unequal to rhs: {2}x{3}", lhs.Values.GetLength (0), lhs.Values.GetLength (1),
-				                         rhs.Values.GetLength (0), rhs.Values.GetLength (1))
-				          , System.Reflection.MethodBase.GetCurrentMethod ().Name);
+				//                         rhs.Values.GetLength (0), rhs.Values.GetLength (1))
+				//          , System.Reflection.MethodBase.GetCurrentMethod ().Name);
 				//ml = null;
 				return new Matrix (0, 0);
 			}
