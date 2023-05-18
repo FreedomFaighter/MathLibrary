@@ -47,7 +47,7 @@ namespace Math.NumericalMethods.OridinaryDifferentialEquations
 						if (j > M) {
 							//MathLog.MathLog ml = new MathLog.MathLog ();
 							//ml.Write ("The maximum number of iterations exceeded"
-							          , System.Reflection.MethodInfo.GetCurrentMethod ().Name);
+							          //, System.Reflection.MethodInfo.GetCurrentMethod ().Name);
 							yield break;
 						}
 					}
