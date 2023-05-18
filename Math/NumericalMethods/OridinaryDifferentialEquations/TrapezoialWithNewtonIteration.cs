@@ -1,7 +1,7 @@
 using System;
 using Math.NumericalMethods;
 using System.Collections.Generic;
-using MathLog;
+//using MathLog;
 namespace Math.NumericalMethods.OridinaryDifferentialEquations
 {
 	public class TrapezoialWithNewtonIteration : INumericalMethod<decimal>
