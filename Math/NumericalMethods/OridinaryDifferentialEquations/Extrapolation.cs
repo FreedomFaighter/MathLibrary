@@ -69,8 +69,9 @@ namespace Math.NumericalMethods.OridinaryDifferentialEquations
 				if (NFLAG == false) {
 					h /= 2.0M;
 					if (h < hmin) {
-						MathLog.MathLog log = new MathLog.MathLog ();
-						log.Write ("hmin exceeded", System.Reflection.MethodBase.GetCurrentMethod ().Name);
+						//MathLog.MathLog log = new MathLog.MathLog ();
+						//log.Write ("hmin exceeded", System.Reflection.MethodBase.GetCurrentMethod ().Name);
+						return;
 					}
 				} else {
 					W0 = y [0];
