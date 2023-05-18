@@ -41,12 +41,6 @@ namespace Math.LinearAlgebra
 		{
 			RowVector result;
 			if (this.Values.Length != rhs.Values.Length) {
-#if DEBUG
-				MathLog.MathLog ml = new MathLog.MathLog ();
-				ml.Write (string.Format ("lhs: {0} rhs: {1}", this.Values.Length, rhs.Values.Length)
-				          , System.Reflection.MethodBase.GetCurrentMethod ().Name);
-				ml = null;
-#endif
 				return new RowVector ();
 			}
 			result = new RowVector (this.Values);
@@ -82,7 +76,12 @@ namespace Math.LinearAlgebra
 
 		public double l2Norm()
 		{
-			return System.Math.Sqrt (Values.Select (p => p * p).Sum ());
+			return l_n_norm(2);
+		}
+
+		public double l_n_norm(int n)
+		{
+			return System.Math.Pow(Values.Select(p=>System.Math.Pow(p, (double)n)).Sum(), 1/((double)n));
 		}
 
 		public static double operator *(RowVector lhs, ColumnVector rhs)
