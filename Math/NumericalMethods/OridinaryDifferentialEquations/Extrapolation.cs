@@ -71,7 +71,7 @@ namespace Math.NumericalMethods.OridinaryDifferentialEquations
 					if (h < hmin) {
 						//MathLog.MathLog log = new MathLog.MathLog ();
 						//log.Write ("hmin exceeded", System.Reflection.MethodBase.GetCurrentMethod ().Name);
-						return new List<Tuple<decimal, decimal>>();
+						yield break;
 					}
 				} else {
 					W0 = y [0];
