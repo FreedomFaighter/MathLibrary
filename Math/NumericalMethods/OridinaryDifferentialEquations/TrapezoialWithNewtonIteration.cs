@@ -1,8 +1,8 @@
 using System;
-using Math.NumericalMethods;
+using MathLibrary.NumericalMethods;
 using System.Collections.Generic;
 //using MathLog;
-namespace Math.NumericalMethods.OridinaryDifferentialEquations
+namespace MathLibrary.NumericalMethods.OridinaryDifferentialEquations
 {
 	public class TrapezoialWithNewtonIteration : INumericalMethod<decimal>
 	{

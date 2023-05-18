@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-namespace Math.NumericalMethods.Polynomials
+namespace MathLibrary.NumericalMethods.Polynomials
 {
 	public class NewtonsDividedDifference
 	{

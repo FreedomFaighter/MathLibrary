@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Data.Linq;
 using System.Threading.Tasks;
 using System.Collections;
-using Math.NumericalMethods;
-using Math.NumericalMethods.OridinaryDifferentialEquations;
+using MathLibrary.NumericalMethods;
+using MathLibrary.NumericalMethods.OridinaryDifferentialEquations;
 
-namespace Math
+namespace MathLibrary
 {
     public static class DecimalMath
     {

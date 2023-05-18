@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Math.LinearAlgebra
+namespace MathLibrary.LinearAlgebra
 {
 	public class MatrixMath
 	{

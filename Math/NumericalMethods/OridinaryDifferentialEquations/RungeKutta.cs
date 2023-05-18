@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Math.NumericalMethods;
+using MathLibrary.NumericalMethods;
 
-namespace Math.NumericalMethods.OridinaryDifferentialEquations
+namespace MathLibrary.NumericalMethods.OridinaryDifferentialEquations
 {
 	public class RungeKutta : INumericalMethod<decimal>
 	{

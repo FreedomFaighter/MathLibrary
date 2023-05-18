@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace Math.NumericalMethods
+namespace MathLibrary.NumericalMethods
 {
 	public interface INumericalMethod<T>
 	{

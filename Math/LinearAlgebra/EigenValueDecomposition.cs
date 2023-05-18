@@ -1,6 +1,6 @@
 using System;
 
-namespace Math.LinearAlgebra
+namespace MathLibrary.LinearAlgebra
 {
 	public class EigenValueDecomposition : ICloneable
 	{

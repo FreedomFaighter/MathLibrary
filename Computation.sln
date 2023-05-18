@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baysian.Classifier", "Baysi
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DiffEq", "DiffEq\DiffEq.pyproj", "{73D08F09-F763-4285-BCE0-CA6025BA0E8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTests", "MathTests\MathTests.csproj", "{B280C45E-24D5-4BA4-8DEB-14FF867D2CC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +25,6 @@ Global
 		{BB98B124-583B-49A0-9399-F194EB9E4B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB98B124-583B-49A0-9399-F194EB9E4B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB98B124-583B-49A0-9399-F194EB9E4B01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A098B576-F6D0-4866-84EC-57D94137D7CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A098B576-F6D0-4866-84EC-57D94137D7CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A098B576-F6D0-4866-84EC-57D94137D7CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A098B576-F6D0-4866-84EC-57D94137D7CB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17B845AB-0686-471E-BEFD-2390E86BCCBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{17B845AB-0686-471E-BEFD-2390E86BCCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17B845AB-0686-471E-BEFD-2390E86BCCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,9 +39,16 @@ Global
 		{74F5EAC3-4E3C-4406-9278-278CD963510E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{73D08F09-F763-4285-BCE0-CA6025BA0E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{73D08F09-F763-4285-BCE0-CA6025BA0E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B280C45E-24D5-4BA4-8DEB-14FF867D2CC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B280C45E-24D5-4BA4-8DEB-14FF867D2CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B280C45E-24D5-4BA4-8DEB-14FF867D2CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B280C45E-24D5-4BA4-8DEB-14FF867D2CC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95640B19-759C-4294-8A50-BDA29F1691A0}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = TestCode\TestCode.csproj

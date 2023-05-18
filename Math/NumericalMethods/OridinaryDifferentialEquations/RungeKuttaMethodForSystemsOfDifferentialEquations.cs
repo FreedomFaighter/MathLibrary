@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Math.NumericalMethods.OridinaryDifferentialEquations
+namespace MathLibrary.NumericalMethods.OridinaryDifferentialEquations
 {
 	public class RungeKuttaMethodForSystemsOfDifferentialEquations
 	{

@@ -1,6 +1,6 @@
 using System;
 
-namespace Math.Differentiation
+namespace MathLibrary.Differentiation
 {
 	static public class Differentiation
 	{

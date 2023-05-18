@@ -1,6 +1,6 @@
 using System;
 
-namespace Math
+namespace MathLibrary
 {
 	static public class BinomialCoefficient
 	{

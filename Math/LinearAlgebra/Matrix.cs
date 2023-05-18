@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Math.LinearAlgebra
+namespace MathLibrary.LinearAlgebra
 {
 	public class Matrix
 	{
@@ -513,7 +513,7 @@ namespace Math.LinearAlgebra
 
 			Q = new Matrix (qs);
 
-			return new Math.LinearAlgebra.QR (Q, R);
+			return new MathLibrary.LinearAlgebra.QR (Q, R);
 		}
 
 		public static Matrix Parition (this Matrix matrix, int startRow, int startColumn, int endRow, int endColumn)
@@ -556,7 +556,7 @@ namespace Math.LinearAlgebra
 						{
 							determinantTest = true;
 						}
-						return new Math.LinearAlgebra.Eigen (pQ, X, new Matrix (n, n), traceTest, determinantTest, TOL);
+						return new MathLibrary.LinearAlgebra.Eigen (pQ, X, new Matrix (n, n), traceTest, determinantTest, TOL);
 					}
 				}
 				return null;
@@ -647,7 +647,7 @@ namespace Math.LinearAlgebra
 				}
 			}
 
-			return new Math.LinearAlgebra.Cholesky (U, L);
+			return new MathLibrary.LinearAlgebra.Cholesky (U, L);
 		}
 
 		public static double Trace(this Matrix matrix)

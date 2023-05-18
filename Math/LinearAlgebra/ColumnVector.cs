@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Math.LinearAlgebra
+namespace MathLibrary.LinearAlgebra
 {
     public class ColumnVector : IVector
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Math
+namespace MathLibrary
 {
 	public static class Tools
 	{

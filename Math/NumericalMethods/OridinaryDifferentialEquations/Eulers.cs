@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Math.NumericalMethods.OridinaryDifferentialEquations;
+using MathLibrary.NumericalMethods.OridinaryDifferentialEquations;
 
-namespace Math.NumericalMethods.OridinaryDifferentialEquations
+namespace MathLibrary.NumericalMethods.OridinaryDifferentialEquations
 {
 	public class Eulers : INumericalMethod<decimal>
 	{

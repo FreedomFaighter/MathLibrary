@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Math.NumericalMethods.OridinaryDifferentialEquations
+namespace MathLibrary.NumericalMethods.OridinaryDifferentialEquations
 {
 	public class Extrapolation : INumericalMethod<decimal>
 	{

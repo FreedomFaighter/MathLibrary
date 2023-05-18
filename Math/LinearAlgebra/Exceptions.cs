@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 using System.Security.Permissions;
 using System.Text;
 
-namespace Math.LinearAlgebra
+namespace MathLibrary.LinearAlgebra
 {
 	[ClassInterface(ClassInterfaceType.None), ComDefaultInterface(typeof(NoSquareException)),ComVisible(true)]
 	[Serializable]
