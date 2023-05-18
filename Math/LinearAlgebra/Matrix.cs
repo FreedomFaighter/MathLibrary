@@ -79,10 +79,10 @@ namespace Math.LinearAlgebra
 			Matrix result;
 
 			if (lhs.Values.GetLength (1) != rhs.Values.GetLength (0)) {
-				MathLog.MathLog ml = new MathLog.MathLog ();
-				ml.Write (string.Format ("lhs columns: {0} does not match rhs rows: {1}", lhs.Values.GetLength (1), rhs.Values.GetLength (0)),
+				//MathLog.MathLog ml = new MathLog.MathLog ();
+				//ml.Write (string.Format ("lhs columns: {0} does not match rhs rows: {1}", lhs.Values.GetLength (1), rhs.Values.GetLength (0)),
 				          System.Reflection.MethodBase.GetCurrentMethod ().Name);
-				ml = null;
+				//ml = null;
 				return new Matrix ();
 			}
 			result = new Matrix (lhs.Values.GetLength (0), rhs.Values.GetLength (1));
@@ -102,11 +102,11 @@ namespace Math.LinearAlgebra
 		{
 			Matrix result;
 			if (lhs.Values.GetLength (0) != rhs.Values.GetLength (0) || lhs.Values.GetLength (1) != rhs.Values.GetLength (1)) {
-				MathLog.MathLog ml = new MathLog.MathLog ();
-				ml.Write (string.Format ("lhs: {0}x{1} unequal to rhs: {2}x{3}", lhs.Values.GetLength (0), lhs.Values.GetLength (1),
+				//MathLog.MathLog ml = new MathLog.MathLog ();
+				//ml.Write (string.Format ("lhs: {0}x{1} unequal to rhs: {2}x{3}", lhs.Values.GetLength (0), lhs.Values.GetLength (1),
 				                         rhs.Values.GetLength (0), rhs.Values.GetLength (1))
 				          , System.Reflection.MethodBase.GetCurrentMethod ().Name);
-				ml = null;
+				//ml = null;
 				return new Matrix (0, 0);
 			}
 
@@ -124,11 +124,11 @@ namespace Math.LinearAlgebra
 		{
 			Matrix result;
 			if (lhs.Values.GetLength (0) != rhs.Values.GetLength (0) || lhs.Values.GetLength (1) != rhs.Values.GetLength (1)) {
-				MathLog.MathLog ml = new MathLog.MathLog ();
-				ml.Write (string.Format ("lhs: {0}x{1} unequal to rhs: {2}x{3}", lhs.Values.GetLength (0), lhs.Values.GetLength (1),
+				//MathLog.MathLog ml = new MathLog.MathLog ();
+				//ml.Write (string.Format ("lhs: {0}x{1} unequal to rhs: {2}x{3}", lhs.Values.GetLength (0), lhs.Values.GetLength (1),
 				                         rhs.Values.GetLength (0), rhs.Values.GetLength (1))
 				          , System.Reflection.MethodBase.GetCurrentMethod ().Name);
-				ml = null;
+				//ml = null;
 				return new Matrix (0, 0);
 			}
 
@@ -191,8 +191,8 @@ namespace Math.LinearAlgebra
 		public double? Determinant ()
 		{
 			if (!this.IsSquare) {
-				MathLog.MathLog ml = new MathLog.MathLog ();
-				ml.Write ("Matrix not square", System.Reflection.MethodBase.GetCurrentMethod ().Name);
+				//MathLog.MathLog ml = new MathLog.MathLog ();
+				//ml.Write ("Matrix not square", System.Reflection.MethodBase.GetCurrentMethod ().Name);
 				return null;
 			}
 			if (this.Values.GetLength (0) == 1 && this.Values.GetLength (1) == 1) {
