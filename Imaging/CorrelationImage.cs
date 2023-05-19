@@ -9,7 +9,7 @@ namespace Imaging
         double[] confidenceBounds;
         Graphics correlationImageGraphics;
         Bitmap correlationImageBitmap;
-        Font imageFont = new("Wingdings", 11);
+        Font imageFont = new("Arial", 11);
         PointF imagePointF;
         public CorrelationImage(double[] correlationFunction, double confBoundsNumer, int imageWidth, int imageHeight, Color background, Brush backgroundFill, Color lineColor)
         {
