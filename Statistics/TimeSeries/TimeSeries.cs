@@ -1,7 +1,6 @@
 using System;
 using System.Linq;
 using MathLibrary.LinearAlgebra;
-using Statistics;
 
 namespace Statistics.TimeSeries
 {

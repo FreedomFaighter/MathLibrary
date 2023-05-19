@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@main
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.1
- #     - name: Restore packages
- #       run: msbuild -p:RestorePackagesConfig=true -t:restore
+      - name: Restore packages
+        run: msbuild -p:RestorePackagesConfig=true -t:restore
       - name: Build solution
         run: msbuild Computation.sln -t:build -property:Configuration=Release

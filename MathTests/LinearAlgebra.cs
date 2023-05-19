@@ -9,7 +9,7 @@ namespace MathTests
         }
 
         [Test]
-        public void Test1()
+        public void Is500by500Matrix()
         {
             int matrixSize = 500;
             Matrix m = new Matrix(matrixSize, matrixSize);
