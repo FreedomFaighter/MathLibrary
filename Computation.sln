@@ -7,13 +7,18 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DiffEq", "DiffEq\DiffEq.pyp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathTests", "MathTests\MathTests.csproj", "{B280C45E-24D5-4BA4-8DEB-14FF867D2CC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{00D1BA31-C603-4D0C-B640-7710DCDD88D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{00D1BA31-C603-4D0C-B640-7710DCDD88D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statistics", "Statistics\Statistics.csproj", "{94D2B97E-5172-40EB-85C5-6C22D79FCD5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Statistics", "Statistics\Statistics.csproj", "{94D2B97E-5172-40EB-85C5-6C22D79FCD5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imaging", "Imaging\Imaging.csproj", "{C7D0492A-3355-4F16-A6CA-469586672C8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imaging", "Imaging\Imaging.csproj", "{C7D0492A-3355-4F16-A6CA-469586672C8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaysianClassifier", "BaysianClassifier\BaysianClassifier.csproj", "{514592F3-C4A8-4A81-A5B5-797E52D87F2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaysianClassifier", "BaysianClassifier\BaysianClassifier.csproj", "{514592F3-C4A8-4A81-A5B5-797E52D87F2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4F27518E-8CE4-4608-88DB-1FA7AD0B5AB7}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\msbuild.yml = .github\workflows\msbuild.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
