@@ -14,7 +14,7 @@ namespace MathTests
         public void Is500by500Matrix()
         {
             int matrixSize = 500;
-            Matrix m = new Matrix(matrixSize, matrixSize);
+            Matrix m = new(matrixSize, matrixSize);
 
             Assert.IsTrue(m.Columns == m.Rows && m.Columns == matrixSize && m.Rows == matrixSize);
         }
