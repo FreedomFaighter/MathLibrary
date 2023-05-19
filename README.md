@@ -1,4 +1,4 @@
-# Math
+# MathLibrary
 
 [![Math Library](https://github.com/FreedomFaighter/Math/actions/workflows/dotnet.yml/badge.svg)](https://github.com/FreedomFaighter/Math/actions/workflows/dotnet.yml)
 
