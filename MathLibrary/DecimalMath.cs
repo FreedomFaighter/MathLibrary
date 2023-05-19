@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Data.Linq;
-using System.Threading.Tasks;
-using System.Collections;
 using MathLibrary.NumericalMethods;
 using MathLibrary.NumericalMethods.OridinaryDifferentialEquations;
 

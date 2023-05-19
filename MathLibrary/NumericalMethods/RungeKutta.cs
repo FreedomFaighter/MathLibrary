@@ -1,5 +1,5 @@
-using System;
-using System.Collections.Generic;
+using MathLibrary.NumericalMethods;
+
 namespace Math.NumericalMethods
 {
 	public class RungeKutta : INumericalMethod<decimal>

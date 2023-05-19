@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using MathLibrary;
 
-namespace Math.NumericalMethods
+namespace MathLibrary.NumericalMethods
 {
 	public class AdamsVariableStepSizePredictorCorrector
 	{

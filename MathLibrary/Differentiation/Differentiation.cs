@@ -1,5 +1,3 @@
-using System;
-
 namespace MathLibrary.Differentiation
 {
 	static public class Differentiation

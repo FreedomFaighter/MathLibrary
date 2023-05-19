@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using MathLibrary.LinearAlgebra;
 
-namespace Baysian.Classifier
+namespace BaysianClassifier
 {
     public class Classifier
     {

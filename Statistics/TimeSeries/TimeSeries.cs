@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using MathLibrary.LinearAlgebra;
 
 namespace Statistics.TimeSeries

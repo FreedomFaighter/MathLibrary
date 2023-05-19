@@ -1,5 +1,4 @@
-using System;
-using System.Collections.Generic;
+using MathLibrary.NumericalMethods;
 
 namespace Math.NumericalMethods
 {

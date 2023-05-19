@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using MathLibrary.LinearAlgebra;
+
 namespace MathTests
 {
     public class Tests

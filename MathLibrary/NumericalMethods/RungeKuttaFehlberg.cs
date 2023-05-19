@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
+using MathLibrary;
+using MathLibrary.NumericalMethods;
 
 namespace Math.NumericalMethods
 {
-	public class RungeKuttaFehlberg :INumericalMethod<decimal>
+	public class RungeKuttaFehlberg : INumericalMethod<decimal>
 	{
 		Func<decimal, decimal, decimal> f_of_t_y;
 		decimal alpha, a, b, hmax, hmin, TOL;

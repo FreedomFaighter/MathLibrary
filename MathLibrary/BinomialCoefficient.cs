@@ -1,5 +1,3 @@
-using System;
-
 namespace MathLibrary
 {
 	static public class BinomialCoefficient
