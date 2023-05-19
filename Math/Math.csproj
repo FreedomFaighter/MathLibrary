@@ -71,10 +71,4 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\MathLog\MathLog.csproj">
-      <Project>{A098B576-F6D0-4866-84EC-57D94137D7CB}</Project>
-      <Name>MathLog</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
