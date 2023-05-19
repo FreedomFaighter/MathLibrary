@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaysianClassifier", "Baysia
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4F27518E-8CE4-4608-88DB-1FA7AD0B5AB7}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\msbuild.yml = .github\workflows\msbuild.yml
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
 	EndProjectSection
 EndProject
 Global
