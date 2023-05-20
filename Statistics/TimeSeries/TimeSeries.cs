@@ -26,9 +26,11 @@ namespace Statistics.TimeSeries
 
         public TimeSeries(double[] v)
         {
+            if (v.Length < 1)
+                throw new DivideByZeroException("Using population variance and must have at least 1 observation"); 
             values = v;
             sampleMean = values.Mean();
-            sampleVariance = values.Variance();
+            sampleVariance = values.Variance(true);
             ComputeAutocovarianceFunction();
             ComputeSampleAutocorrelationFunction();
             ComputeSamplePartialAutocorrelationMatrix();
