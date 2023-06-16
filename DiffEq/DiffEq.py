@@ -41,8 +41,8 @@ def exactEquation(Fmxy, Fnxy):
 	integrate(Fmxy,x) - integrate(Fnxy-Derivative(integrate(Fmxy,x),y))
 """
 page 76
-n = {x|x ∈ I\{0,1}} : standardForm(Fp, Fq)-y**(n-1)
-n = {0,1} : standardForm(Fp, Fq)
+n = {x|x ∈ ℤ\{0,1}} : standardForm(Fp, Fq)-y**(n-1)
+n = {x| x ∈ ℤ\{(-∞,0),(1,∞)}} : standardForm(Fp, Fq)
 """
 def bernoulliEquation(Fp, Fq, n, y):
 	ans=standardForm(Fp, Fq)
