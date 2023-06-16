@@ -21,7 +21,7 @@ Seperable Equations of the form dy/dx=f(x,y)
 page 40-41
 """
 def seperableEquation(Fg, Fp):
-	return integrate(1 / Fp, y) - integrate(Fg, x) - Symbol('c')
+	integrate(1 / Fp, y) - integrate(Fg, x) - Symbol('c')
 """
 
 """
