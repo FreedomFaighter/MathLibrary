@@ -205,6 +205,8 @@ namespace MathLibrary.LinearAlgebra
 			return sum;
 		}
 
+		//Creates a submatrix with excludingRow and excludingColumn removed
+		//Useful in calculating a determinant
 		public Matrix createSubMatrix (int excludingRow, int excludingColumn)
 		{
 			Matrix result = new Matrix (this.Values.GetLength (0) - 1, this.Values.GetLength (1) - 1);
