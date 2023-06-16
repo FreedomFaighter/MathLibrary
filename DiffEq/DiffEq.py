@@ -3,6 +3,9 @@ from numbers import Integral
 from sympy.solvers import solve
 from sympy.abc import x, y, c, Symbol
 from sympy import oo, integrate, exp, Derivative
+"""
+Nagle, R. Kent, Saff, E. B., Snider, Arthur David, fundamentals of Differential Equations, Pearson Education, Inc., 2008, ISBN 0-321-38841-0
+"""
 
 def secondOrderSolutionFrom(a, b, c):
 	c1 = Symbol('c1')
@@ -13,6 +16,10 @@ def secondOrderSolutionFrom(a, b, c):
 		roots = solve(a*x**2+b*x+c)
 	c1*exp(roots[1]*x)+c2*exp(roots[2]*x)
 
+"""
+Seperable Equations of the form dy/dx=f(x,y)
+
+"""
 def seperableEquation(Fg, Fp):
 	return integrate(1 / Fp, y) - integrate(Fg, x) - Symbol('c')
 	
@@ -35,3 +42,4 @@ def bernoulliEquation(Fp, Fq, n, y):
 		standardForm(Fp, Fq)
 	else:
 		standardForm(Fp, Fq)-y**(n-1)
+
