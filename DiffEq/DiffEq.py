@@ -1,4 +1,4 @@
-from code import interact
+﻿from code import interact
 from numbers import Integral
 from sympy.solvers import solve
 from sympy.abc import x, y, c, Symbol
@@ -39,7 +39,10 @@ def standardForm(Fp, Fq):
 
 def exactEquation(Fmxy, Fnxy):
 	integrate(Fmxy,x) - integrate(Fnxy-Derivative(integrate(Fmxy,x),y))
-	
+"""
+page 76
+n = {x|x ∈ I\{0,1}} 
+"""
 def bernoulliEquation(Fp, Fq, n, y):
 	if n in range([0,1]):
 		standardForm(Fp, Fq)
