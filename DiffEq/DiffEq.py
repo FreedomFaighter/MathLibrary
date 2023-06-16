@@ -13,7 +13,7 @@ def secondOrderSolutionFrom(a, b, c):
 		roots = solve(a*x**2+b*x+c)
 	c1*exp(roots[1]*x)+c2*exp(roots[2]*x)
 
-def seperableEquations(Fg, Fp):
+def seperableEquation(Fg, Fp):
 	return integrate(1 / Fp, y) - integrate(Fg, x) - Symbol('c')
 	
 def linearFirstOrderEquation(Fa1, Fa0, Fb):
@@ -27,5 +27,11 @@ def standardForm(Fp, Fq):
 	Fmu = exp(integrate(Fp, x))
 	integrate(Fmu*Fq+c, x) / Fmu
 
-def exactEquations(Fmxy, Fnxy):
+def exactEquation(Fmxy, Fnxy):
 	integrate(Fmxy,x) - integrate(Fnxy-Derivative(integrate(Fmxy,x),y))
+	
+def bernoulliEquation(Fp, Fq, n, y):
+	if n in range([0,1]):
+		standardForm(Fp, Fq)
+	else:
+		standardForm(Fp, Fq)-y**(n-1)
