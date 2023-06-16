@@ -18,17 +18,20 @@ def secondOrderSolutionFrom(a, b, c):
 
 """
 Seperable Equations of the form dy/dx=f(x,y)
-
+page 40-41
 """
 def seperableEquation(Fg, Fp):
 	return integrate(1 / Fp, y) - integrate(Fg, x) - Symbol('c')
-	
+"""
+
+"""
 def linearFirstOrderEquation(Fa1, Fa0, Fb):
 	if Fa0 is None:
 		integrate(Fb / Fa1) + c
-	else:
-		if Derivative(Fa1) is Fa0:
-			integrate(Fb, x) / Fa1
+	else if Derivative(Fa1) is Fa0:
+		integrate(Fb, x) / Fa1
+	else if Fa1 is 0:
+		raise('Error a_{1}(x) is 0')
 
 def standardForm(Fp, Fq):
 	Fmu = exp(integrate(Fp, x))
