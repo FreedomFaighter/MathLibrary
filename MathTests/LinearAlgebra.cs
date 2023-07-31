@@ -27,7 +27,7 @@ namespace MathTests
         {
             int matrixSize = 1001;
             Matrix m = new Matrix(matrixSize,matrixSize);
-            Assert.IsFalse((m.Columns * m.Columns) != (1000 ^ 2));
+            Assert.IsFalse((m.Columns * m.Columns) == (1000 ^ 2));
         }
 
         [Test]
@@ -35,7 +35,7 @@ namespace MathTests
         {
             int matrixSize = 500;
             Matrix matrix = new(matrixSize,matrixSize);
-            Assert.IsTrue((matrixSize ^ 2) == (matrix.Columns * matrix.Rows));
+            Assert.IsTrue((matrixSize * matrixSize) == (matrix.Columns * matrix.Rows));
         }
     }
 }
