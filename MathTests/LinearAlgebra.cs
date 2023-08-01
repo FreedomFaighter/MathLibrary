@@ -37,5 +37,13 @@ namespace MathTests
             Matrix matrix = new(matrixSize,matrixSize);
             Assert.IsTrue((matrixSize * matrixSize) == (matrix.Columns * matrix.Rows));
         }
+
+        [Test]
+        public void OperatorNotationFalse()
+        {
+            int matrixSize = 17;
+            Matrix matrix = new(matrixSize,matrixSize);
+            Assert.IsFalse((matrixSize ^ 2) == (matrix.Columns * matrix.Rows));
+        }
     }
 }
