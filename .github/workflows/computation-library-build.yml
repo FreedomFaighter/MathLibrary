@@ -3,14 +3,13 @@
 
 name: Math Library of various classes and methods
 
-on:
+on: 
   push:
-    branches:
-      - '*'
-    tags-ignore:
-      - '*'
+    branches-ignore:
+    - 'main'
   pull_request:
     branches: [ main ]
+
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
