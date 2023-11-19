@@ -6,9 +6,9 @@ name: Math Library of various classes and methods
 on: 
   push:
     branches-ignore:
-    - 'main'
+    - 'master'
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 
   # Allows you to run this workflow manually from the Actions tab
