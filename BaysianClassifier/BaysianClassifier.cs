@@ -20,7 +20,7 @@ namespace BaysianClassifier
 
         private Dictionary<string, Matrix> sigmas = new Dictionary<string, Matrix>();
 
-        private int totalObservations = 0;
+        private int totalObservations;
 
         private Dictionary<string, double> probabilityEachClass = new Dictionary<string, double>();
 
@@ -28,6 +28,7 @@ namespace BaysianClassifier
 
         public Classifier(Dictionary<string, Matrix> classes)
         {
+            totalObservations = 0;
             this.classes = classes;
             CalculateMeanOfEachClass();
             GetSigmaMatricies();
