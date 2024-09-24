@@ -37,9 +37,9 @@ namespace Statistics.Logistic
         /// <param name="tuple"></param>
         /// <param name="x"></param>
         /// <returns></returns>
-        internal static Decimal OddsRatioMeasure(Tuple<OddsRatio, ProbabilityValue>[] tuple, ProbabilityValue x)
+        internal static Decimal OddsRatioMeasure(Tuple<OddsRatio, ProbabilityValue>[] tuple)
         {
-            return System.Math.Abs(OddsRatio(tuple).Invoke(x).Value-tuple.Select(x => x.Item2.Value).Sum());
+            return System.Math.Abs(OddsRatio(tuple).Invoke(new ProbabilityValue(tuple.Select(x => x.Item2.Value).Sum())).Value-tuple.Select(x => x.Item2.Value).Sum());
         }
     }
 }
