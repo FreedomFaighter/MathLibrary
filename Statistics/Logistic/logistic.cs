@@ -5,6 +5,8 @@ namespace Statistics.Logistic
     {
         internal static Func<ProbabilityValue, ProbabilityValue> OddsRatio(Tuple<OddsRatio, ProbabilityValue>[] tuple)
         {
+            if (tuple.Select(x => x.Item2.Value).Sum() < 0 || tuple.Select(x => x.Item2.Value).Sum() > 1)
+                throw new ArgumentOutOfRangeException("Given probabilities outside the valid range");
             Func<ProbabilityValue, ProbabilityValue> func = (x) =>
             {
                 Func<ProbabilityValue, ProbabilityValue> innerFunc = null;
