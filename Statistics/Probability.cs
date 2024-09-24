@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Statistics
+﻿namespace Statistics
 {
+    /// <summary>
+    /// Probability class with Decimal type and bounds checking upon constructor use
+    /// Value is read only after constructor
+    /// </summary>
     internal class ProbabilityValue
     {
         readonly private Decimal value;

@@ -1,8 +1,17 @@
 ﻿
 namespace Statistics.Logistic
 {
+    /// <summary>
+    /// logistic methods holds static methods for usage of an open form of checking the numerical error after a logistic regression has calculated the odds ratios
+    /// </summary>
     internal class logisticMethods
     {
+        /// <summary>
+        /// static method for usage of odds ratios and probability associated to compute value of the total probability response from a logistic regression
+        /// </summary>
+        /// <param name="tuple"></param>
+        /// <returns>returns a Func class type constaining the method for calculating the value of the sum of the probabilities</returns>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         internal static Func<ProbabilityValue, ProbabilityValue> OddsRatio(Tuple<OddsRatio, ProbabilityValue>[] tuple)
         {
             if (tuple.Select(x => x.Item2.Value).Sum() < 0 || tuple.Select(x => x.Item2.Value).Sum() > 1)
@@ -22,10 +31,15 @@ namespace Statistics.Logistic
             };
             return func;
         }
-
+        /// <summary>
+        /// Measure for calculating the differing in the Func from OddsRatio and the value given
+        /// </summary>
+        /// <param name="tuple"></param>
+        /// <param name="x"></param>
+        /// <returns></returns>
         internal static Decimal OddsRatioMeasure(Tuple<OddsRatio, ProbabilityValue>[] tuple, ProbabilityValue x)
         {
-            return System.Math.Abs(OddsRatio(tuple).Invoke(x).Value-x.Value);
+            return System.Math.Abs(OddsRatio(tuple).Invoke(x).Value-tuple.Select(x => x.Item2.Value).Sum());
         }
     }
 }

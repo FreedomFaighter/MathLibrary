@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Statistics
+﻿namespace Statistics
 {
+    /// <summary>
+    /// Odds ratio with Decimal type and bounds checking
+    /// Value is readonly after constructor use
+    /// </summary>
     internal class OddsRatio
     {
         readonly Decimal value;
 
         internal OddsRatio(Decimal value)
         {
-
             this.value = value;
 
             if (Validate())
