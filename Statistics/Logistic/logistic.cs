@@ -14,8 +14,10 @@ namespace Statistics.Logistic
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         internal static Func<ProbabilityValue, ProbabilityValue> OddsRatio(Tuple<OddsRatio, ProbabilityValue>[] tuple)
         {
+            if (tuple.Count() < 1)
+                throw new ArgumentException(nameof(tuple), "Does not contain any members in the array");
             if (tuple.Select(x => x.Item2.Value).Sum() < 0 || tuple.Select(x => x.Item2.Value).Sum() > 1)
-                throw new ArgumentOutOfRangeException("Given probabilities outside the valid range");
+                throw new ArgumentOutOfRangeException(nameof(tuple), "Given probabilities outside the valid range");
             Func<ProbabilityValue, ProbabilityValue> func = (x) =>
             {
                 Func<ProbabilityValue, ProbabilityValue> innerFunc = null;
