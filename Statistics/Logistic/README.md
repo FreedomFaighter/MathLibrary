@@ -1,3 +1,5 @@
+[Motivation](https://github.com/FreedomFaighter/GeneticRiskOnOddsRatios)
+
 # Open form of the logistic equation
 
 $$P\left(D|G_{i}\right)$$ 
