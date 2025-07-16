@@ -22,7 +22,7 @@ $$\sum_{o=1}^{∞}{\frac{X\iota_{o}}{1-X+X\iota_{o}}P\left(G_{o}\right)}=P\left(
 
 A stochastic model might be describe with a distribution of each 
 
-$$\iota_{o} \in \left(0\lt \iota\lt ∞ \right)$$
+$$\iota_{o} \in \left(0,∞\right)$$
 
 positive only style of distribution constrainted by the definition of odds ratios
 
