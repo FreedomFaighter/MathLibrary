@@ -1,4 +1,4 @@
-[Motivation](https://github.com/FreedomFaighter/GeneticRiskOnOddsRatios)
+[Motivation](https://github.com/brainkernel/GeneticRiskOnOddsRatios)
 
 # Open form of the logistic equation
 
