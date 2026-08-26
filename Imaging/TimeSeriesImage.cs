@@ -43,15 +43,9 @@ namespace Imaging
                 g.FillRectangle(backgroundFill, new Rectangle(1, 1, width - 1, height - 1));
                 int XaxisYcoordinate = (int)(height * 0.5);
                 g.DrawLine(black, new Point(0, XaxisYcoordinate), new Point(width, XaxisYcoordinate));
-                for (int i = 0; i < timeSeries.Length; i++)
-                {
-                    g.DrawRectangle(green, new Rectangle(i * rectangleScaleForX + 1, XaxisYcoordinate - (int)System.Math.Round(timeSeries[i] * rectangleScaleForY), 2, 2));
-                }
-                for (int i = 0; i < timeSeries.Length - 1; i++)
-                {
-                    g.DrawLine(black, new PointF(i * rectangleScaleForX + 2, XaxisYcoordinate - (int)System.Math.Round(timeSeries[i] * rectangleScaleForY))
-                                                 , new PointF((i + 1) * rectangleScaleForX + 2, XaxisYcoordinate - (int)System.Math.Round(timeSeries[i + 1] * rectangleScaleForY)));
-                }
+                timeSeries.ForEach(i => g.DrawRectangle(green, new Rectangle(i * rectangleScaleForX + 1, XaxisYcoordinate - (int)System.Math.Round(timeSeries[i] * rectangleScaleForY), 2, 2)));
+                timeSeries.ForEach(i => g.DrawLine(black, new PointF(i * rectangleScaleForX + 2, XaxisYcoordinate - (int)System.Math.Round(timeSeries[i] * rectangleScaleForY))
+                                                 , new PointF((i + 1) * rectangleScaleForX + 2, XaxisYcoordinate - (int)System.Math.Round(timeSeries[i + 1] * rectangleScaleForY))));
             }
         }
 
